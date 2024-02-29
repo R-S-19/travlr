@@ -4,12 +4,15 @@ const dbURI = `mongodb://${host}/travlr`;
 const readLine = require("readline");
 
 // avoid current server discovery and monitoring engine is depreciated
-
+mongoose.set("useUnifiedTopology", true);
 
 const connect = () => {
   setTimeout(
     () =>
-      mongoose.connect(dbURI, ),
+      mongoose.connect(dbURI, {
+        useNewUrlParser: true,
+        useCreateIndex: true,
+      }),
     1000
   );
 };
