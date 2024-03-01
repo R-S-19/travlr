@@ -70,4 +70,5 @@ process.on("SIGTERM", () => {
 connect();
 
 // bring in schema
-require("./models/travlr");
+require('./travlr');
+require('./user');
